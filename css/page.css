@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@500;700&display=swap');
+
+:root[data-theme="light"] {
+  --text: 15, 51, 0;
+  --background: 250, 255, 251;
+  --primary: 97, 203, 52;
+  --secondary: 126, 48, 48;
+  --accent: 255, 225, 0;
+}
+:root[data-theme="dark"] {
+  --text: 219, 255, 204;
+  --background: 0, 5, 1;
+  --primary: 97, 203, 52;
+  --secondary: 207, 129, 129;
+  --accent: 255, 225, 0;
+}
+
+
+body {
+  font-family: 'Roboto';
+  font-weight: 400;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 3.053rem; /* 48.8px */}
+
+h2 {font-size: 2.442rem; /* 39.04px */}
+
+h3 {font-size: 1.954rem; /* 31.2px */}
+
+h4 {font-size: 1.563rem; /* 24.96px */}
+
+h5 {font-size: 1.250rem; /* 20px */}
+
+small {font-size: 0.800rem; /* 12.8px */}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: rgb(var(--background));
+}
+
+body, span, div {
+  color: rgb(var(--text));
+}

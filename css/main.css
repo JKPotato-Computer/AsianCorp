@@ -1,0 +1,258 @@
+/* Navigation */
+
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    position: fixed;
+    inset: 0;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 12px;
+    background-color: rgb(var(--background), 0.2);
+    backdrop-filter: blur(10px);
+    gap: 24px;
+	z-index: 10;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: "Poppins";
+    color: black;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+	display: flex;
+	position: relative;
+	gap: 8px;
+	cursor: pointer;
+}
+
+nav a:not(.HomeRedirect)::after {
+    content: '';
+    display: block;
+	position: absolute;
+	bottom: -4px;
+    height: 2px;
+    background-color: black;
+    min-width: fit-content;
+    margin-inline: auto;
+    transition: .25s ease-in-out;
+    width: 0%;
+    opacity: 0;
+}
+
+nav > div {
+	margin-left: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+	align-items: center;
+	gap: 24px;
+}
+
+nav a:not(.HomeRedirect):hover::after {
+    width: 100%;
+    opacity: 1;
+}
+
+.HomeRedirect {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+	gap: 0;
+}
+
+.HomeRedirect > span {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.HomeRedirect:hover > img {
+	scale: 1.15;
+}
+
+.newTag {
+	color: white;
+	background-color: rgb(var(--primary));
+	border-radius: 16px;
+	width: max-content;
+	text-align: center;
+	padding: 0px 8px;
+}
+
+img.webLogoImg {
+    height: 64px;
+    aspect-ratio: 1 / 1;
+	transition: .25s ease-in-out;
+}
+
+nav a:has(.bagCount) {
+	background: rgb(var(--primary),0.2);
+	padding: 4px 12px;
+	border-radius: 24px;
+}
+
+/* Home Page Content */
+
+main {
+	flex-direction: column;
+	display: flex;
+	align-items: center;
+	margin-top: 80px;
+	margin-bottom: 240px;
+	gap: 16px;
+}
+
+#sustainableAwareness {
+	width: 100%;
+	background: rgb(var(--secondary), 0.04);
+	height: 60px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+#sustainableAwareness > a {
+	text-decoration: none;
+	background: rgba(var(--accent),.8);
+	padding: 6px 12px;
+	border-radius: 20px;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Poppins";
+	margin-left: 8px;
+}
+
+#sustainableAwareness > a:hover {
+	filter: brightness(.95);
+}
+
+#smartGlassesProduct {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(180deg, rgb(var(--primary),0.2), rgb(var(--primary), 0.25));
+	padding-bottom: 50px;
+}
+
+.galleryDisplay {
+	width: 95%;
+	height: max-content;
+	position: relative;
+	overflow: hidden;
+	background: var(--background);
+}
+
+#smartGlassesProduct > div {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	margin: 10px; 
+}
+
+#smartGlassesProduct > span {
+	position: relative;
+	bottom: 20px;
+	font-size: 25px;
+}
+
+#smartGlassesProduct > span > b {
+	border-bottom: 2px dotted black;
+	font-weight: 500;
+}
+
+button {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50px;
+	padding: 4px 12px;
+	border: 1.5px solid rgb(var(--primary));
+	background: none;
+	font-family: "Poppins";
+	font-size: 20px;
+	cursor: pointer;
+	color: rgb(var(--primary));
+}
+button.actionButton:hover {
+	filter: brightness(1.1);
+}
+
+button.actionButton {
+	background: rgb(var(--primary));
+	border: rgb(var(--primary));
+	color: white;
+}
+
+a.learnMoreSG {
+	text-decoration: none;
+}
+
+button.standardButton {
+	filter: brightness(0.6);
+}
+
+button.standardButton:hover {
+	filter: brightness(0.8);
+}
+
+.smartGlassesImg {
+	height: 250px;
+	position: relative;
+	margin-top: -16px;
+	transform: scaleX(-1.2) scaleY(1.2) ;
+}
+
+#splitCompany {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	height: 500px;
+	width: 95%;
+}
+
+#splitCompany > div {
+	width: 100%;
+	height: 100%;
+}
+
+#about {
+	background: rgb(var(--secondary), 0.2)
+}
+
+#reviews {
+	background: rgb(225, 225, 225)
+}
+
+#about > h2,#reviews > h2 {
+	text-align: center;
+	margin-bottom: 0;
+}
+
+blockquote {
+	display: block;
+	text-align: center;
+	background: rgb(var(--secondary),0.1);
+	padding: 8px;
+	color: black;
+	font-family: "Poppins";
+	font-size: 20px;
+}
+
+#about > p {
+	font-size: 22px;
+	line-height: 36px;
+	margin: 32px;
+}

@@ -1,17 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AsianCorp</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/page.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="icon" href="img/AsianCorpIcon.png" type="image/x-icon">
   </head>
   <body>
-    <main>
-        <h1>AsianCorp</h1>
-        <p>we are held hostage for this</p>
-    </main>
+	<nav id="header">
+		<a href="index.html" class="HomeRedirect">
+			<img src="img/AsianCorpIcon.png" class="webLogoImg">
+			<span>AsianCorp™</span>
+		</a>
+		<a href="smartGlasses.html">
+			<div class="newTag">NEW</div>
+			<span>Smart Glasses</span>
+		</a>
+		<a href="">
+			<span>Product Name</a>
+		</a>
+		<a href="">
+			<span>Product Name</a>
+		</a>
+		<a href="sustainability.html">
+			<span>Environmental</a>
+		</a>
+		<a href="support.html">
+			<span>Support</span>
+		</a>
+		<div>
+			<a>
+				<span class="material-symbols-outlined">search</span>
+				<span>Search</span>
+			</a>
+			<a>
+				<span class="material-symbols-outlined">shopping_bag</span>
+				<span class="bagCount">0</span>
+			</a>
+		</div>
+	</nav>
+	<main>
+		<div id="sustainableAwareness">
+			<span>We don't try to gain resources at the cost of our world. Learn more on how our product is (actually) environmentally friendly.</span>
+			<a href="sustainability.html">Learn More <span class="material-symbols-outlined">double_arrow</span></a>
+			</div>
+		<div class="galleryDisplay" id="smartGlassesProduct">
+			<h2>Smart Glasses</h2>
+			<span>No holdups, just a <b title="But then I had a very good idea, I used F5. See, using F5 gave me a whole new perspective and I was able to see a chest I couldn't have seen before. - SeaWattGaming">whole new perspective</b> from your eyes.</span>
+			<div>
+				<button class="actionButton">Pre-Order Now</button>
+				<a href="smartGlasses.html" class="learnMoreSG"><button class="standardButton">Learn More</button></a>
+			</div>
+			<img src="img/SmartGlasses.png" class="smartGlassesImg">
+		</div>
+		<div id="splitCompany">
+			<div class="galleryDisplay" id="about">
+				<h2>AsianCorp™</h2>
+				<blockquote>Innovation without a choice.</blockquote>
+				<p>Welcome to <b>AsianCorp™</b>, the place of true technology. We seek to improve the lives of the daily people in the world, no matter who you are. We value our time and work into our products, and we believe you should too!</p>
+			</div>
+			<div class="galleryDisplay" id="reviews">
+				<h2>Testimonials</h2>
+				<div class="review">
+					<div class="starList">
+						<span class="material-symbols-filled">star</span>
+					</div>
+					<div class="contentInfo">
+						<span class="contactName">Yacouba Filippŭ</span>
+						<span class="content">Great product, especially the Smart Glasses! But where did my children go...</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="galleryDisplay" id="environmental">
+		</div>
+	</main>
   </body>
 </html>
