@@ -102,7 +102,7 @@ main {
 	display: flex;
 	align-items: center;
 	margin-top: 80px;
-	margin-bottom: 240px;
+	margin-bottom: 100px;
 	gap: 16px;
 }
 
@@ -129,6 +129,10 @@ main {
 	margin-left: 8px;
 }
 
+#sustainableAwareness > a * {
+	color: black;
+}
+
 #sustainableAwareness > a:hover {
 	filter: brightness(.95);
 }
@@ -143,7 +147,7 @@ main {
 }
 
 .galleryDisplay {
-	width: 95%;
+	width: calc(100% - 32px);
 	height: max-content;
 	position: relative;
 	overflow: hidden;
@@ -210,7 +214,8 @@ button.standardButton:hover {
 	height: 250px;
 	position: relative;
 	margin-top: -16px;
-	transform: scaleX(-1.2) scaleY(1.2) ;
+	transform: scaleX(-1.2) scaleY(1.2);
+	z-index: -1;
 }
 
 #splitCompany {
@@ -220,7 +225,7 @@ button.standardButton:hover {
 	align-items: center;
 	gap: 16px;
 	height: 500px;
-	width: 95%;
+	width: calc(100% - 32px);
 }
 
 #splitCompany > div {
@@ -233,7 +238,7 @@ button.standardButton:hover {
 }
 
 #reviews {
-	background: rgb(225, 225, 225)
+	background: rgb(var(--text),0.1);
 }
 
 #about > h2,#reviews > h2 {
@@ -241,7 +246,7 @@ button.standardButton:hover {
 	margin-bottom: 0;
 }
 
-blockquote {
+#about > blockquote {
 	display: block;
 	text-align: center;
 	background: rgb(var(--secondary),0.1);
@@ -255,4 +260,200 @@ blockquote {
 	font-size: 22px;
 	line-height: 36px;
 	margin: 32px;
+}
+
+#smartGlassesProduct > div:has(.priceTag) {
+  margin: -6px 0 0 0;
+  flex-direction: column;
+  gap: 0;
+}
+
+#smartGlassesProduct > div:has(.priceTag) > span:not(.priceTag) {
+  font-size: 22px;
+}
+
+.priceTag {
+  font-size: 40px;
+  font-family: "Poppins";
+}
+
+.priceTag > .dollar {
+  font-size: 30px;
+  position: relative;
+  bottom: 8px;
+}
+
+.review {
+	background: rgb(var(--background));
+	padding: 16px;
+	margin: 16px 16px 0px 16px;
+}
+
+.star {
+	color: rgb(222 163 46);
+}
+
+.star.dark {
+	color: rgb(0 0 0);
+}
+
+.contentInfo {
+	display: flex;
+	flex-direction: column;
+	margin-top: -4px;
+}
+
+.contactName {
+	font-weight: bold;
+	font-family: Poppins;
+}
+
+.invisible {
+	opacity: 0;
+	transform: translateY(100px);
+}
+
+.visible {
+	animation: makeVisible .5s ease-in-out forwards;
+}
+
+@keyframes makeVisible {
+	from {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+	
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+#environmental {
+	background: rgb(7,77,157);
+	background: -moz-linear-gradient(180deg, rgba(7,77,157,1) 0%, rgba(22,41,0,1) 100%);
+	background: -webkit-linear-gradient(180deg, rgba(7,77,157,1) 0%, rgba(22,41,0,1) 100%);
+	background: linear-gradient(180deg, rgba(7,77,157,1) 0%, rgba(22,41,0,1) 100%);
+	height: 375px;
+	padding: 16px;
+}
+
+#environmental > h2 {
+	margin: 0;
+}
+
+#environmental > h2:nth-of-type(2) {
+	margin-top: -12px;
+}
+
+#environmental p {
+	line-height: 32px;
+	font-size: 22px;
+	margin-top: 6px;
+}
+
+#environmental a {
+	text-decoration: none;
+	position: absolute !important;
+	left: 50%;
+	transform: translateX(-50%);
+	width: max-content;
+}
+
+#environmental a button {
+	font-size: 24px;
+}
+
+#environmental a * {
+	color: white;
+}
+
+#environmental > *:not(.custom-shape-divider-bottom-1716851857) {
+	color: white;
+	z-index: 2;
+	position: relative;
+}
+
+footer {
+	background-color: rgb(var(--text),0.05);
+	width: 100%;
+	height: 75px;
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+	gap: 12px;
+	padding: 0px 12px;
+}
+
+footer > div {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+	gap: 24px;
+	margin-left: auto;
+}
+
+footer > div * {
+	color: rgb(var(--text),0.7);
+}
+
+
+.asianSunImg {
+	position: absolute !important;
+	right: 6px;
+	top: 6px;
+	height: 130px;
+	animation: hueRotate 5s linear infinite;
+}
+
+.smallACIcon {
+	height: 50px;
+}
+
+.asianCorpTitle {
+	font-weight: bold;
+	font-family: "Poppins";
+	margin-left: -12px;
+	font-size: 24px;
+}
+
+@keyframes hueRotate {
+	from {
+		filter: hue-rotate(0deg);
+	}
+	
+	to {
+		filter: hue-rotate(360deg);
+	}
+}
+
+/* Cool Waves Thingy */
+.custom-shape-divider-bottom-1716851857 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1716851857 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 254px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1716851857 .shape-fill {
+    fill: #00A71180;
+	animation: hueRotate 10s linear infinite;
+}
+
+#ThemeChanger {
+	text-decoration: underline;
+	cursor: pointer;
 }

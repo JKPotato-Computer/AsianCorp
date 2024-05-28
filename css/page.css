@@ -8,7 +8,7 @@
   --accent: 255, 225, 0;
 }
 :root[data-theme="dark"] {
-  --text: 219, 255, 204;
+  --text: 239, 255, 234;
   --background: 0, 5, 1;
   --primary: 97, 203, 52;
   --secondary: 207, 129, 129;

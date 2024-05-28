@@ -1,0 +1,120 @@
+#smartGlassesHolder {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;	
+	align-items: center;
+	background-color: rgb(var(--primary),0.4);
+	padding: 24px;
+}
+
+#smartGlassesHolder > h2 {
+	margin: 0;
+}
+
+#smartGlassesHolder > span {
+	font-size: 24px;
+	margin-bottom: 16px;
+}
+
+#smartGlassesHolder > div:has(.priceTag) {
+	margin-bottom: 8px;
+}
+
+#smartGlassesProduct {
+	background: rgb(var(--secondary),0.3);
+	padding: 16px;
+}
+
+#smartGlassesProduct > img {
+	margin: 0;
+}
+
+#smartGlassesCommercial {
+	background-color: rgb(var(--text),0.1);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	padding: 16px;
+}
+
+#smartGlassesCommercial h2 {
+	margin: 0;
+}
+
+video {
+	background: black;
+	width: 70%;
+}
+
+#campaign1 {
+	background: rgb(var(--accent),0.1);
+}
+
+#campaign2 {
+	background: rgb(var(--accent),0.2);
+}
+
+#campaign3 {
+	background: rgb(var(--accent),0.3);
+}
+
+#campaign1,#campaign2,#campaign3 {
+	display: grid;
+	padding: 16px;
+	grid-template-areas: "title picture" "description picture";
+	gap: 16px;
+	justify-content: center;
+	align-items: center;
+}
+
+#campaign1 *:not(img,h3),
+#campaign2 *:not(img,h3,sup),
+#campaign3 *:not(img,h3) {
+	font-size: 24px;
+}
+
+#campaign1 h3,#campaign2 h3,#campaign3 h3 {
+	grid-area: title;
+	margin: 0;
+	border-bottom: 6px dotted rgb(var(--accent));
+}
+
+#campaign1 p,#campaign2 div,#campaign3 div {
+	grid-area: description;
+}
+
+#campaign1 img,#campaign2 img,#campaign3 img {
+	grid-area: picture;
+	border-radius: 16px;
+	box-shadow: 6px 6px 0 rgb(var(--accent));
+}
+
+#question {
+	background: rgb(var(--secondary),0.2);
+	padding: 16px;
+}
+
+#question h2 {
+	margin: 0 0 16px 0;
+}
+
+.GlassesOS {
+	height: 200px;
+}
+
+.learnMoreSG * {
+	color: rgb(var(--text));
+	border-color: rgb(var(--text));
+}
+
+.brochureButton * {
+	background: rgb(var(--secondary)) !important;
+	color: white !important;
+	border-color: rgb(var(--secondary)) !important;
+}
+
+.brochureButton {
+	text-decoration: none;
+}
