@@ -43,7 +43,8 @@
 	margin: 0;
 }
 
-video {
+iframe {
+	border: 0;
 	background: black;
 	width: 70%;
 }
