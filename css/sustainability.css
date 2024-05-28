@@ -129,7 +129,7 @@ main > span {
 	height: 35%;
 	z-index: 11;
 	background: rgb(var(--background));
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid rgb(var(--text));
 	display: flex;
 	justify-content: center;
 	align-items: center;
