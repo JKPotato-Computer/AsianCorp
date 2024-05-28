@@ -137,13 +137,51 @@ main {
 	filter: brightness(.95);
 }
 
-#smartGlassesProduct {
+#productShowcaseHolder {
+	position: relative;
+	height: 500px;
+}
+
+.productHolder {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	flex-direction: row;
+	justify-content: right;
 	align-items: center;
-	background: linear-gradient(180deg, rgb(var(--primary),0.2), rgb(var(--primary), 0.25));
-	padding-bottom: 50px;
+	height: 100%;
+	width: 100%;
+	gap: 16px;
+	padding: 16px;
+	position: absolute;
+	inset: 0;
+	transform: translateX(-100%);
+}
+
+.productHolder.active {
+	transform: translateX(0);
+}
+
+.productHolder.activeFromBefore  {
+	transform: translateX(-100%);
+	transition: none;
+}
+
+.productHolder.activeFromAfter {
+	transform: translateX(100%);
+	transition: none;
+}
+
+.productInfoHolder {
+	background: rgb(var(--background));
+	padding: 16px;
+	position: absolute;
+	left: 32px;
+	top: 32px;
+	width: 40%;
+}
+
+#smartGlassesProduct {
+	background: rgb(208,255,102);
+	background: radial-gradient(circle at bottom right,rgb(var(--primary),0.2) 0%, rgb(var(--primary),0.6) 100%);
 }
 
 .galleryDisplay {
@@ -154,7 +192,7 @@ main {
 	background: var(--background);
 }
 
-#smartGlassesProduct > div {
+.productInfoHolder > div:has(button) {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -163,15 +201,19 @@ main {
 	margin: 10px; 
 }
 
-#smartGlassesProduct > span {
+.productInfoHolder > span {
 	position: relative;
 	bottom: 20px;
 	font-size: 25px;
 }
 
-#smartGlassesProduct > span > b {
+.productInfoHolder > span > b {
 	border-bottom: 2px dotted black;
 	font-weight: 500;
+}
+
+.productInfoHolder h2 {
+	margin: 0 0 16px 0;
 }
 
 button {
@@ -212,9 +254,7 @@ button.standardButton:hover {
 
 .smartGlassesImg {
 	height: 250px;
-	position: relative;
-	margin-top: -16px;
-	transform: scaleX(-1.2) scaleY(1.2);
+	transform: scaleX(-1);
 	z-index: -1;
 }
 
@@ -262,13 +302,13 @@ button.standardButton:hover {
 	margin: 32px;
 }
 
-#smartGlassesProduct > div:has(.priceTag) {
+.productInfoHolder > div:has(.priceTag) {
   margin: -6px 0 0 0;
   flex-direction: column;
   gap: 0;
 }
 
-#smartGlassesProduct > div:has(.priceTag) > span:not(.priceTag) {
+.productInfoHolder > div:has(.priceTag) > span:not(.priceTag) {
   font-size: 22px;
 }
 
@@ -456,4 +496,40 @@ footer > div * {
 #ThemeChanger {
 	text-decoration: underline;
 	cursor: pointer;
+}
+
+#productArrowSelector {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 16px;
+	gap: 16px;
+	background: rgb(var(--text),0.3);
+	padding: 8px 16px;
+}
+
+#productArrowSelector > * {
+	color: rgb(var(--text));
+	border-color: rgb(var(--text));
+}
+
+#productArrowSelector > button:hover {
+	background: rgb(var(--text),0.2);
+}
+
+.pageCircle {
+	height: 8px;
+	width: 8px;
+	aspect-ratio: 1/1;
+	background: rgb(var(--text));
+	border-radius: 5px;
+	transition: .15s ease-in-out;
+}
+
+.pageCircle.selected {
+	background: rgb(var(--background));
 }

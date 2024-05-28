@@ -70,6 +70,10 @@ iframe {
 	align-items: center;
 }
 
+#campaign2 {
+	grid-template-areas: "picture title" "picture description";
+}
+
 #campaign1 *:not(img,h3),
 #campaign2 *:not(img,h3,sup),
 #campaign3 *:not(img,h3) {
@@ -118,4 +122,43 @@ iframe {
 
 .brochureButton {
 	text-decoration: none;
+}
+
+.split {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	width: calc(100% - 32px);
+}
+
+.split > div {
+	background: rgb(var(--text),0.075);
+	width: 100%;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.split > div:nth-child(even) {
+	background: rgb(var(--text),0.15);
+}
+
+.split > div * {
+	text-align: center;
+	margin: 0;
+}
+
+.recommended {
+	background: rgb(var(--secondary));
+	color: white;
+	padding: 4px 12px;
+	border-radius: 12px;
+}
+
+main > h2 {
+	margin: 0 8px;
 }

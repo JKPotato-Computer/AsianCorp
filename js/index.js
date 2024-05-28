@@ -12,7 +12,7 @@ const observer = new IntersectionObserver((entries) => {
 	})
 })
 
-for (const element of document.querySelectorAll('main div.galleryDisplay')) {
+for (const element of document.querySelectorAll('main div.galleryDisplay, main > h1,main > h2,main > h3,main > h4,main > h5,main > h6')) {
 	element.classList.add("invisible")
 	observer.observe(element);
 }
