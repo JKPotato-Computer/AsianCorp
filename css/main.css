@@ -224,7 +224,7 @@ button.standardButton:hover {
 	justify-content: center;
 	align-items: center;
 	gap: 16px;
-	height: 500px;
+	height: 620px;
 	width: calc(100% - 32px);
 }
 
