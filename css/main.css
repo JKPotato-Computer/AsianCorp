@@ -301,9 +301,9 @@ button.standardButton:hover {
 	position: absolute;
 	bottom: 16px;
 	right: 16px;
-	color: black;
+	color: rgb(var(--text));
 	padding: 4px 24px;
-	border-color: black;
+	border-color: rgb(var(--text));
 }
 
 .article {

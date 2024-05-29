@@ -1,0 +1,44 @@
+#warning {
+	background: rgb(255,0,0,0.6);
+	padding: 12px;
+	width: 80%;
+	text-align: center;
+	display: none;
+}
+
+.shoppingList {
+	background: rgb(var(--text),0.02);
+	width: 80%;
+	height: max-content;
+}
+
+.shoppingList > div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 12px;
+	padding: 6px;
+}
+
+.shoppingHeader > span {
+	font-family: "Poppins";
+}
+
+.shoppingHeader,.shoppingThing {
+	justify-content: space-between;
+}
+
+.salesTax, .total {
+	background: rgb(var(--text),0.04);
+	justify-content: right;
+	padding: 16px 6px !important;
+}
+
+.salesTax > span:nth-child(2),
+.total > span:nth-child(2) {
+	font-size: 24px;
+}
+
+.total {
+	background: rgb(var(--background),0.5) !important;
+}

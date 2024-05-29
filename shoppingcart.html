@@ -7,10 +7,9 @@
     <title>AsianCorp</title>
     <link rel="stylesheet" href="css/page.css">
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/smartGlasses.css">
+	<link rel="stylesheet" href="css/shoppingcart.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />    <link rel="icon" href="img/AsianCorpIcon.png" type="image/x-icon">
-	<script src="js/index.js" defer></script>
   </head>
   <body>
 	<nav id="header">
@@ -41,14 +40,34 @@
 			</a>
 			<a href="shoppingcart.html">
 				<span class="material-symbols-outlined">shopping_bag</span>
-				<span class="bagCount">0</span>
+				<span class="bagCount">999,999,999</span>
 			</a>
 		</div>
 	</nav>
 	<main>
-		your'e in <u>debt</u>
-		
-		<p>pls pay us 500 million dollars in 58 seconds :)</p>
+		<h2>Shopping Bag</h2>
+		<span id="warning">your'e in debt</span>
+		<div class="shoppingList">
+			<div class="shoppingHeader">
+				<span>Product</span>
+				<span>Quantity</span>
+				<span>Price</span>
+			</div>
+			<div class="shoppingThing">
+				<span>Smart Glasses</span>
+				<span>x999,999,999</span>
+				<span>$339,999,999,660</span>
+			</div>
+			<div class="salesTax">
+				<span>Sales Tax:</span>
+				<span>* 1.0725 (7.25%)</span>
+			</div>
+			<div class="total">
+				<span>Total:</span>
+				<span class="cost">$364,649,999,635</span>
+			</div>
+		</div>
+		<button class="actionButton" onclick='document.querySelector("#warning").style.display = "block";'>Checkout</button>
 	</main>
 	<footer>
 		<img src="img/AsianCorpIcon.png" class="smallACIcon">
