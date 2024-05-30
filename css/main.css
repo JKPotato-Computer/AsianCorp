@@ -275,6 +275,14 @@ button.standardButton:hover {
 #about {
 	background: rgb(var(--secondary), 0.3);
 	width: 27.5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#about > h2{
+	margin: 0;
 }
 
 #newsArticles {
@@ -634,4 +642,8 @@ footer > div * {
 
 .pageCircle.selected {
 	background: white;
+}
+
+.logoIcon {
+	width: 150px;
 }
