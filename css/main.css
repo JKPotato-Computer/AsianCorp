@@ -264,7 +264,7 @@ button.standardButton:hover {
 	justify-content: center;
 	align-items: center;
 	gap: 16px;
-	height: 650px;
+	height: 700px;
 	width: calc(100% - 32px);
 }
 
@@ -343,7 +343,7 @@ button.standardButton:hover {
 	grid-template-rows: 80px 1fr;
 	justify-content: center;
 	align-items: start;
-	height: 608px;
+	height: 470px;
 }
 
 #about > h2,#reviews > h2 {
@@ -362,9 +362,9 @@ button.standardButton:hover {
 	justify-content: center;
 	align-items: center;
 	background: rgb(var(--background));
-	height: max-content;
-	margin: 16px;
+	height: 350px;
 	padding: 32px;
+	margin: 16px 0px 0px 16px;
 }
 
 .reviewOverall > .starList {
@@ -380,8 +380,11 @@ button.standardButton:hover {
 	font-size: 24px;
 }
 
-#reviewList {
+.reviewList {
 	grid-area: right;
+	height: 350px;
+	overflow: auto;
+	margin: 0 16px 0;
 }
 
 #about > blockquote {

@@ -20,6 +20,10 @@
 	padding: 6px;
 }
 
+.shoppingList a {
+	color: rgb(var(--black));
+}
+
 .shoppingHeader > span {
 	font-family: "Poppins";
 }
@@ -42,3 +46,4 @@
 .total {
 	background: rgb(var(--background),0.5) !important;
 }
+
